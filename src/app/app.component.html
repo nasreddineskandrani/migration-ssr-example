@@ -1,0 +1,12 @@
+<!--
+<div class="waf-header-bar">
+  <div class="waf-text">We Are Front End</div>
+</div>
+-->
+<div class="root all-background-theme" [ngClass]="{
+    'all-background-theme': index === 0,
+    'vue-background-theme': index === 1,
+    'ng-background-theme' : index === 2,
+    'react-background-theme': index === 3}">
+  <router-outlet></router-outlet>
+</div>
