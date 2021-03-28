@@ -1,0 +1,144 @@
+/* You can add global styles to this file, and also import other style files */
+
+html {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  flex: 1 0 auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+@font-face {
+  font-family: 'pokemon';
+  src: url('./assets/pokemon.ttf');
+}
+
+@font-face {
+  font-family: 'test2';
+  src: url('./assets/test2.ttf');
+}
+
+
+// button special
+.waf-button {
+  border-radius: 4px;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px;
+  width: 240px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.waf-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  color: black;
+}
+
+.waf-button span:after {
+  content: '\00bb';
+  color: white;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.waf-button:hover span {
+  padding-right: 25px;
+}
+
+.waf-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+.s-wrapper {
+  border-radius: 12px;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  display: flex;
+  top: 0px;
+  left: 0px !important;
+  padding-left: 50px;
+  padding-top: 14px;
+  max-height: 56px;
+  width: 120px !important;
+  background-color: #fafafa;
+  -webkit-box-shadow: 14px -20px 26px 27px rgba(250,250,250,1);
+  -moz-box-shadow: 14px -20px 26px 27px rgba(250,250,250,1);
+  box-shadow: 14px -20px 26px 27px rgba(250,250,250,1);
+  border-radius: 5px;
+}
+
+.swiper-button-prev {
+  display: none;
+}
+
+.swiper-button-next {
+  display: none;
+}
+
+//https://www.flaticon.com/free-icon/left-chevron_566011
+//https://www.flaticon.com/free-icon/right-chevron_566012
+@media screen and (min-width: 800px) {
+  .swiper-button-prev {
+    display: block;
+    background-image: url('./assets/icons/left-chevron.png') !important;
+    background-size: 64px 64px !important;
+    width: 64px !important;
+    height: 64px !important;
+    left: 0px !important;
+  }
+
+  .swiper-button-next {
+    display: block;
+    background-image: url('./assets/icons/right-chevron.png') !important;
+    background-size: 64px 64px !important;
+    width: 64px !important;
+    height: 64px !important;
+    right: 0px !important;
+  }
+}
+
+.all-background-theme {
+  background: white;
+}
+
+.vue-background-theme {
+  background: rgb(30,122,83);
+  background: linear-gradient(90deg, rgba(30,122,83,1) 0%, rgba(63,185,132,1) 50%, rgba(63,185,132,1) 100%);
+  //background: #3fb984;
+}
+
+.ng-background-theme {
+  background: rgb(195,0,47);
+  background: linear-gradient(90deg, rgba(195,0,47,1) 0%, rgba(195,0,47,1) 50%, rgba(235,90,92,1) 100%);
+  //background: #c3002f;
+}
+
+.react-background-theme {
+  background: rgb(0,168,195);
+  background: linear-gradient(90deg, rgba(0,168,195,1) 0%, rgba(97,218,251,1) 50%, rgba(97,218,251,1) 100%);
+  //background: #61dafb;
+}
