@@ -14,13 +14,6 @@ import { HomeComponent } from './home/home.component';
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule
   ],
-  providers: [
-    {
-      provide: SWIPER_CONFIG,
-      useValue: DEFAULT_SWIPER_CONFIG
-    }
->>>>>>> edb8e6b... v8 universal working
-  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
