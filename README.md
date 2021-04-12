@@ -32,3 +32,14 @@ https://github.com/nasreddineskandrani/migration-ssr-example/tree/ng8-ssr-migrat
 2. Since the migration via script to angular 9 SSR was not working:
 I used the branch `ng8-no-srr-add-ng9-ssr` last commit (adding ssr to v9) and applied manually the changes to the branch `ng-8-add-ssr`
 so i endup with a branch `ng-8-add-ssr` updated to v9 then adding ssr to it.
+
+# Angular SSR migration ng9 to ng10
+nothing special to do just apply `ng update`
+result:
+https://github.com/nasreddineskandrani/migration-ssr-example/tree/ng9-ssr-migrate-to-ng10-ssr
+
+# Angular SSR migration ng10 to ng11
+nothing special to do just apply `ng update`
+note: there is something in the doc update about universal for v11 (double check in case)
+result:
+https://github.com/nasreddineskandrani/migration-ssr-example/tree/ng10-ssr-migrate-to-ng11-ssr
