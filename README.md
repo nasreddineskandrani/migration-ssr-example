@@ -45,7 +45,7 @@ result:
 https://github.com/nasreddineskandrani/migration-ssr-example/tree/ng10-ssr-migrate-to-ng11-ssr
 
 
-~~~~~~~~~~~~~~~~
+`````````````````````````````
 
 # ANGULAR APP INITIAlIZER WITH SSR IN NG9
 https://github.com/nasreddineskandrani/migration-ssr-example/tree/ng9-ssr-app-initializer
