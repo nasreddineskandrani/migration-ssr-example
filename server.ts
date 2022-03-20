@@ -35,9 +35,26 @@ const distFolder = join(process.cwd(), 'dist/weareangular/browser');
 const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
 
 // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
-app.engine('html', ngExpressEngine({
-  bootstrap: AppServerModule
-}));
+app.engine(
+  'html', 
+  (_, options: any, callback) => {
+    const req = options.req;
+    const protocol = req.protocol;
+    const host = req.get('host');
+  
+    // trick to handle base_url
+    // https://stackoverflow.com/questions/55704526/how-to-make-an-angular-app-witch-universal-ssr-use-dynamic-configurations-from-j
+    const engine =   ngExpressEngine(
+      {
+        bootstrap: AppServerModule,
+        providers: [
+          { provide: 'APP_BASE_URL', useFactory: () => `${protocol}://${host}`, deps: [] },
+        ]
+      }
+    );
+    engine(_, options, callback);
+  }
+);
 
 app.set('view engine', 'html');
 app.set('views', distFolder);
